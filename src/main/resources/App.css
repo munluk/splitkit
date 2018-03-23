@@ -1,0 +1,68 @@
+/*@charset "ISO-8859-1"; */
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 15.02.2018, 10:04:48
+    Author     : Lukas Munteanu
+*/
+/* .root {-fx-background-image: url("background.png");}*/
+
+#output-pane {
+    -fx-background: transparent;
+    -fx-background-color: transparent;
+}
+
+.label {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #0E1D33;
+}
+
+#login-text{
+    -fx-font-size: 32px;
+    -fx-font-family: "Arial Black";
+    -fx-fill: #115E7F;
+}
+
+#people-scroll-pane {
+    -fx-background: transparent;
+    -fx-background-color: transparent;
+}
+
+#output-text {
+    -fx-fill: black;
+    -fx-font-weight: bold;
+    -fx-font-size: 12px;
+}
+
+#add-button {
+    -fx-text-fill: white;
+    -fx-font-family: "Arial Narrow";
+    -fx-font-weight: bold;
+    -fx-background-color: linear-gradient(#61a2b1, #2A5058);
+}
+
+#remove-button {
+	-fx-background-color: transparent;
+	-fx-padding: 6 4 4 6;
+}
+
+#remove-button:pressed {
+	-fx-background-color: transparent;
+	-fx-padding: 5, 5, 5, 5;
+}
+
+#message-text {
+    -fx-fill: red;
+    -fx-font-weight: bold;
+    -fx-font-size: 10px;
+}
+
+#optional-text {
+    -fx-fill: black;
+    -fx-font-weight: bold;
+    -fx-font-size: 8px;
+}
