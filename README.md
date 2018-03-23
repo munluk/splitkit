@@ -12,4 +12,4 @@ mvn clean compile assembly:single
 '''
 
 # Preview
-<img src="https://github.com/munluk/splitkit/git-images/preview.png" width="90%"></img>
+<img src="https://github.com/munluk/splitkit/blob/master/git-images/preview.PNG" width="50%"></img>
