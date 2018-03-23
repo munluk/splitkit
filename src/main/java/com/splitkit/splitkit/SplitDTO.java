@@ -14,7 +14,7 @@ public class SplitDTO {
 
 	public String asString() {
 		if(moneyStreams.isEmpty()) {
-			return "No Splits Necessary!";
+			return "No transactions necessary!";
 		}else {
 			StringBuilder sb = new StringBuilder();
 	        sb.append(String.format("Total expenses: %.2f%n%n", this.totalExpenses));
