@@ -52,7 +52,6 @@ public class App extends Application {
     @SuppressWarnings("unchecked")
 	@Override
     public void start(Stage primaryStage) {
-        addTestPeople(peopleList);
         Scene scene = new Scene(new Group());
         final Label label = new Label("People");
         label.setFont(new Font("Arial", 20));
@@ -300,7 +299,6 @@ public class App extends Application {
         });
         
         // add style sheets
-//        System.out.println(App.class.getResource("/").toExternalForm());
         scene.getStylesheets().add(App.class.getResource("/App.css").toExternalForm());
         
         // ==================== Stage ====================
@@ -317,28 +315,6 @@ public class App extends Application {
      */
     public static void main(String[] args) {
         launch(args);
-    }
-        
-    /**
-     * Test case
-     * @param list Observable List of the table view
-     */
-    private void addTestPeople(ObservableList<Person> list){
-        Person personA = new Person("A", 20.0f);
-        personA.addExpense(10.0f);
-        list.add(personA);
-        Person personB = new Person("B", 25.0f);
-        personB.addExpense(12.0f);
-        list.add(personB);
-        Person personC = new Person("C", 25.0f);
-        personC.addExpense(15.0f);
-        list.add(personC);
-        Person personD = new Person("D", 10.0f);
-        personD.addExpense(28.0f);
-        list.add(personD);
-        Person personE = new Person("E", 20.0f);
-        personE.addExpense(35.0f);
-        list.add(personE);
     }
 }
 
