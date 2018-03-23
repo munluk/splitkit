@@ -43,12 +43,4 @@ public class SplitCalculatorTest {
 	public void testComputeTotal() throws SplitException {
 		assertEquals(100.0f,  splitCalculator.computeSplit(personList).totalExpenses, 10e-13);
 	}
-	
-	@Test
-	public void testComputeSplit_checkIfTheStreamsAreComputedCorrectly() throws SplitException {
-		SplitDTO splitDTO = splitCalculator.computeSplit(personList);
-		
-//		assertEquals(0.0f, , 10e-13);
-	}
-	
 }

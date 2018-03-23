@@ -47,13 +47,13 @@ public class SplitCalculator {
         
         float totalDept = 0.0f;         // the sum of all peoples dept 
         for(Person person: peopleList){
+        	Person temporalPerson = new Person(person);
+        	temporalPerson.residual = abs(person.residual);
             if(person.residual > 0.0f){
-                person.residual = abs(person.residual);
-                receiverQueue.add(person);
+                receiverQueue.add(temporalPerson);
                 totalDept += person.residual;
             }else if(person.residual < 0.0f){
-                person.residual = abs(person.residual);
-                deptorQueue.add(person);
+                deptorQueue.add(temporalPerson);
             }
         }
         
@@ -139,7 +139,7 @@ public class SplitCalculator {
             logger.debug(sb.toString());
         }
         List<MoneyStream> moneyStreams = this.computeMoneyStreams(peopleList);
-        return new SplitDTO(moneyStreams, this.totalExpenses);
+        return new SplitDTO(moneyStreams, peopleList, this.totalExpenses);
     }
     
     /**

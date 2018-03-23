@@ -13,7 +13,6 @@ public class Person {
     public float share;         /* share of the sum of all people*/
     
     public Person(String name, float sip){
-//        this.expenses_detailed = new ArrayList<Float>();
         this.name = name;
         this.shareInPercent = sip;
         this.expenses = 0.0f;

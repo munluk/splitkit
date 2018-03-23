@@ -52,6 +52,7 @@ public class App extends Application {
     @SuppressWarnings("unchecked")
 	@Override
     public void start(Stage primaryStage) {
+    	addTestPeople();
         Scene scene = new Scene(new Group());
         final Label label = new Label("People");
         label.setFont(new Font("Arial", 20));
@@ -315,6 +316,24 @@ public class App extends Application {
      */
     public static void main(String[] args) {
         launch(args);
+    }
+    
+    private void addTestPeople() {
+    	Person personA = new Person("A", 20.0f);
+	    personA.addExpense(10.0f);
+	    peopleList.add(personA);
+	    Person personB = new Person("B", 25.0f);
+	    personB.addExpense(12.0f);
+	    peopleList.add(personB);
+	    Person personC = new Person("C", 25.0f);
+	    personC.addExpense(15.0f);
+	    peopleList.add(personC);
+	    Person personD = new Person("D", 10.0f);
+	    personD.addExpense(28.0f);
+	    peopleList.add(personD);
+	    Person personE = new Person("E", 20.0f);
+	    personE.addExpense(35.0f);
+	    peopleList.add(personE);
     }
 }
 

@@ -1,38 +1,36 @@
 package com.splitkit.splitkit;
 import java.util.ArrayList;
+import java.util.List;
+
 import com.splitkit.exception.SplitException;
-import javafx.collections.ObservableList;
 
 /**
  *
  * @author Lukas Munteanu
  */
 public class Logic {
+
+	private SplitCalculator calculator = new SplitCalculator();
     
-    private SplitCalculator calculator = new SplitCalculator();
-            
     public Logic(){
         
     }
     
-    public SplitDTO computeSplit(ObservableList<Person> peopleList, int mode) throws SplitException{
-        ArrayList<Person> newPeopleList = new ArrayList<Person>();
+    public SplitDTO computeSplit(List<Person> peopleList, int mode) throws SplitException{
+    	List<Person> currentPeopleList = new ArrayList<Person>();
         for (Person person: peopleList){
-            newPeopleList.add(new Person(person));
+            currentPeopleList.add(new Person(person));
         }
-//        String outputString;
         switch (mode){
-            case 0: // standard split using sips
+            case 0: 
                 break;
-            case 1: // split equally -> overwrite the sips
-                float sip = 100.0f / (float)peopleList.size();
-                for(Person person: newPeopleList){
-                    person.shareInPercent = sip;
+            case 1: 
+                float sipForEqualShares = 100.0f / (float)peopleList.size();
+                for(Person person: currentPeopleList){
+                    person.shareInPercent = sipForEqualShares;
                 }
                 break;
         }
-//        outputString = this.calculator.computeSplit(newPeopleList);
-//        return outputString;
-        return this.calculator.computeSplit(newPeopleList);
+        return this.calculator.computeSplit(currentPeopleList);
     }
 }

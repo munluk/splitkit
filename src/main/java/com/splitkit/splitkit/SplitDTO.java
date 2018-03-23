@@ -3,13 +3,16 @@ package com.splitkit.splitkit;
 import java.util.List;
 
 public class SplitDTO {
+	
 	public List<MoneyStream> moneyStreams;
+	public List<Person> processedPeopleList;
 	public float totalExpenses = 0.0f;
 	
-	public SplitDTO(List<MoneyStream> moneyStreams, float totalExpenses) {
+	public SplitDTO(List<MoneyStream> moneyStreams, List<Person> processedPeopleList, float totalExpenses) {
 		super();
 		this.moneyStreams = moneyStreams;
 		this.totalExpenses = totalExpenses;
+		this.processedPeopleList = processedPeopleList;
 	}
 
 	public String asString() {

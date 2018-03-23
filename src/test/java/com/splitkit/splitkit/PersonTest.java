@@ -80,8 +80,8 @@ public class PersonTest{
 	
 	@Test
 	public void testGetPerson_PersonInList() {
-		assertNotNull("A", Person.getPerson("A", peopleList).name);
-		assertEquals("A", Person.getPerson("A", peopleList).name);
+		assertNotNull("C", Person.getPerson("C", peopleList).name);
+		assertEquals("C", Person.getPerson("C", peopleList).name);
 	}
 	
 }
